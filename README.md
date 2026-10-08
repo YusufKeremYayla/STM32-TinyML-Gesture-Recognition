@@ -9,11 +9,15 @@ This project implements an edge AI (TinyML) gesture recognition system on an STM
 * **Non-Blocking Architecture:** Uses a custom Circular Buffer to continuously collect 3-axis sensor data without halting the main CPU operations.
 * **Modular C/C++ Design:** Clean separation of concerns between hardware control (`main.cpp`) and the AI inference logic (`ai_controller.cpp`) using `extern "C"` linkage.
 
+<img width="165" height="631" alt="image" src="https://github.com/user-attachments/assets/3723cd5c-44a2-47fc-9c74-4edbd66ae048" />
+
 ## 🛠️ Hardware & Software
 * **Microcontroller:** STM32F4 Series (Tested on STM32F407)
 * **Sensor:** LIS3DSH Accelerometer (SPI Interface)
 * **Development Tools:** STM32CubeIDE, STM32CubeMX
 * **Machine Learning:** Edge Impulse SDK (C++ Deployment)
+
+  <img width="727" height="772" alt="image" src="https://github.com/user-attachments/assets/d899a6d7-e509-42e1-b1d4-a1d38df82109" />
 
 ## 🚀 Getting Started
 1. Clone this repository to your local machine.
@@ -21,6 +25,8 @@ This project implements an edge AI (TinyML) gesture recognition system on an STM
 3. Build the project (`Project -> Build All`).
 4. Flash the compiled firmware to your STM32 development board.
 5. Open a Serial Terminal (Baud Rate: `115200`) to view real-time inference results, Softmax probabilities, and Anomaly scores.
+
+<img width="745" height="645" alt="image" src="https://github.com/user-attachments/assets/62a32ac7-d8eb-4708-9ade-c7c299a775d3" />
 
 ## 📁 Core Project Structure
 * `Core/Src/ai_controller.cpp`: Handles Edge Impulse DSP conversions, inference execution, and anomaly threshold checking.
